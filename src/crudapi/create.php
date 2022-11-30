@@ -13,7 +13,8 @@ if($request->student_id){
 	$student_id=$request->student_id;
 	$name=$request->name;
 	$batch_number=$request->batch_number;
-	$sql="INSERT INTO students(id,student_id,name,batch_number) VALUES ('','$student_id','$name','$batch_number')";
+	$obtain_mark=$request->obtain_mark;
+	$sql="INSERT INTO students(id,student_id,name,batch_number,obtain_mark) VALUES ('','$student_id','$name','$batch_number','$obtain_mark')";
 	$query=$mysqli->query($sql);
 	echo $mysqli->insert_id;
 }

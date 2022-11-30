@@ -13,8 +13,9 @@ $request = json_decode($postdata);
 	$student_id=$request->student_id;
 	$name=$request->name;
 	$batch_number=$request->batch_number;
+	$obtain_mark=$request->obtain_mark;
 	
-	$sql="update students set student_id='$student_id', name='$name', batch_number='$batch_number' where id=$id";
+	$sql="update students set student_id='$student_id', name='$name', batch_number='$batch_number',obtain_mark='$obtain_mark' where id=$id";
 	$query=$mysqli->query($sql);
 	echo "success";
 ?>
